@@ -35,6 +35,5 @@ class SendEmail implements ShouldQueue
             $message->to($this->email);
         });
 
-       //Log::info('已发送邮件');
     }
 }
