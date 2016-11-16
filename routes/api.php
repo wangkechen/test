@@ -16,3 +16,9 @@ use Illuminate\Http\Request;
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:api');
+
+Route::any('user', function()
+{
+    $user = new App\User;
+    return $user->signup();
+});
